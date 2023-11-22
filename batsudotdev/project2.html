@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Lab</title>
+    <link rel="stylesheet" href="assets/project.css">
+    <!-- Add any additional styles or scripts as needed -->
+    <link href="https://fonts.cdnfonts.com/css/south-park-with-lowercase" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mentone" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/masonry.pkgd.min.js"></script> 
+    <script src="assets/project2script.js" defer></script>   
+</head>
+<body>
+    <header>
+      <a href="work.html" class="back-button">Back</a>
+    </header>
+
+    <div class="container">
+        <h1>JSON: handling, manipulation, and serialization</h1>
+        <article class="blog-post">
+            <div class="post-content">
+                <!-- Your explanation and placeholders for photos go here -->
+                <p>In this JSON document, we have information about children enrolled in a summer camp.</p>
+                <textarea readonly id="xmlSnippet"></textarea>
+                <script>
+                    // XML code snippet
+                    const xmlSnippet = 
+                    `
+                    {
+    "children": [
+      {
+        "childID": 123456789,
+        "name": {
+          "firstName": "John",
+          "lastName": "Doe"
+        },
+        "age": 10,
+        "gender": "Male",
+        "address": {
+          "street": "123 Street Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "L1A 2N3"
+        },
+        "dietaryRestrictions": {
+          "allergy": "Peanuts",
+          "restrictions": "Eggs"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Susan Doe",
+          "parentPhone": "999-999-9999"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Art Adventure"
+      },
+      {
+        "childID": 13579753,
+        "name": {
+          "firstName": "Sam",
+          "lastName": "Tim"
+        },
+        "age": 11,
+        "gender": "Female",
+        "address": {
+          "street": "452 Streeting Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "P7E 5A1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "Tomato",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joanna Doe",
+          "parentPhone": "888-888-8888"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1357223,
+        "name": {
+          "firstName": "Robbie",
+          "lastName": "Tim"
+        },
+        "age": 10,
+        "gender": "Male",
+        "address": {
+          "street": "452 Streeting Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "P7E 5A1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joanna Doe",
+          "parentPhone": "888-888-8888"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1285322,
+        "name": {
+          "firstName": "Josie",
+          "lastName": "Pylo"
+        },
+        "age": 10,
+        "gender": "Female",
+        "address": {
+          "street": "452 Avenue",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "L1A 2N8"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Xavier Pylo",
+          "parentPhone": "777-777-7777"
+        },
+        "emergencyContact": {
+          "emergencyName": "Karen Doe",
+          "emergencyNumber": "242-221-1214"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1352123,
+        "name": {
+          "firstName": "Mary",
+          "lastName": "Pop"
+        },
+        "age": 10,
+        "gender": "Female",
+        "address": {
+          "street": "452 Crest",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "K18 2N1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joe Bee",
+          "parentPhone": "666-666-6666"
+        },
+        "emergencyContact": {
+          "emergencyName": "Nolan Kyle",
+          "emergencyNumber": "242-223-2311"
+        },
+        "campProgram": "Art Adventure"
+      }
+    ]
+  }
+
+`;
+            
+                    // Set the XML snippet in the textarea
+                    document.getElementById('xmlSnippet').textContent = xmlSnippet;
+                </script>
+
+<P><b>Data Handling </b></P>
+<p>1. 'data.children[0]' accesses the array of chldin in the 'data' object and retrives the first child
+<br> firstChild.name.firstName and firstChild.name.lastName: Accesses the nested name object to get the first name and last name of the child.
+<br>firstChild.age: Accesses the age property of the child.
+The console.log statements displays the retrieved information</p>
+<pre><code>const firstChild = data.children[0];
+    console.log("First child's name:", firstChild.name.firstName, firstChild.name.lastName);
+    console.log("First child's age:", firstChild.age);</code></pre>
+    <p>Now lets apply all this to our JSON document 
+    </p>
+    <div id="childInfo">
+        <b>Child Information</b>
+        <p id="childName"></p>
+        <p id="childAge"></p>
+    </div>
+    <script src="assets/project2script.js" defer></script>   
+    <br>
+
+    <hr>
+    <P><b>Data Manipulation</b> </P>
+<p>const newChild = { ... }: Defines a new child object with the specified properties.
+    <br>data.children.push(newChild): Adds the new child to the array of children in the data object.</p>
+<pre><code>// Adding a new child to the data
+    const newChild = {
+      childID: 987654321,
+      name: { firstName: "Emma", lastName: "Smith" },
+      age: 9,
+      gender: "Female",
+      address: { street: "789 Avenue", city: "Thunder Bay", province: "Ontario", zip: "L2B 3C4" },
+      dietaryRestrictions: { allergy: "Milk", restrictions: "None" },
+      medicalInformation: { medication: "Asthma inhaler", medicalCondition: "Asthma" },
+      contact: { parentsName: "Michael Smith", parentPhone: "555-555-5555" },
+      emergencyContact: { emergencyName: "Michael Smith", emergencyNumber: "123-456-7890" },
+      campProgram: "Nature Explorer",
+    };
+    
+    data.children.push(newChild);</code></pre>
+
+    <p>Now lets apply it to our JSON document</p>
+    <div id="newChildInfo"></div>
+<hr>
+    <P><b>Serializing/Deserialization</b></P>
+
+        <pre><code>// Serializing the data to JSON
+            const jsonData = JSON.stringify(data, null, 2);
+            
+            // Deserializing JSON back to a JavaScript object
+            const parsedData = JSON.parse(jsonData);
+            
+            // Checking if the deserialized data is the same as the original data
+            console.log("Is data equal to parsedData?", JSON.stringify(data) === JSON.stringify(parsedData));</code></pre>
+            <p>JSON.stringify(data, null, 2): Converts the data object to a JSON-formatted string with an indentation of 2 spaces. This is useful for readability.
+              <br>JSON.parse(jsonData): Parses the JSON-formatted string (jsonData) back into a JavaScript object.
+              <br>The console.log statement checks if the deserialized data is equal to the original data. This is done by comparing the JSON-formatted strings of the original and parsed data.
+              </p>
+            <p>Now lets apply this to our JSON document </p>
+    
+            <textarea id="serializedData" rows="10" cols="50"></textarea>
+            
+            </div>
+        </article>
+    </div>
+    <script>       document.addEventListener("DOMContentLoaded", function () {
+      // Add a click event listener to all links
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+          link.addEventListener("click", function (event) {
+              // Prevent the default link behavior
+              event.preventDefault();
+  
+              // Add fade-out class to body
+              document.body.classList.add("fade-out");
+  
+              // Redirect to the link after the fade-out transition
+              const targetUrl = this.href;
+              setTimeout(() => {
+                  window.location.href = targetUrl;
+              }, 500); // Adjust the duration to match the CSS transition duration
+          });
+      });
+  });</script>
+</body>
+</html>

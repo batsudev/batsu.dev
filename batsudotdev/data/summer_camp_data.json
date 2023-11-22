@@ -1,0 +1,164 @@
+{
+    "children": [
+      {
+        "childID": 123456789,
+        "name": {
+          "firstName": "John",
+          "lastName": "Doe"
+        },
+        "age": 10,
+        "gender": "Male",
+        "address": {
+          "street": "123 Street Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "L1A 2N3"
+        },
+        "dietaryRestrictions": {
+          "allergy": "Peanuts",
+          "restrictions": "Eggs"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Susan Doe",
+          "parentPhone": "999-999-9999"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Art Adventure"
+      },
+      {
+        "childID": 13579753,
+        "name": {
+          "firstName": "Sam",
+          "lastName": "Tim"
+        },
+        "age": 11,
+        "gender": "Female",
+        "address": {
+          "street": "452 Streeting Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "P7E 5A1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "Tomato",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joanna Doe",
+          "parentPhone": "888-888-8888"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1357223,
+        "name": {
+          "firstName": "Robbie",
+          "lastName": "Tim"
+        },
+        "age": 10,
+        "gender": "Male",
+        "address": {
+          "street": "452 Streeting Name",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "P7E 5A1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joanna Doe",
+          "parentPhone": "888-888-8888"
+        },
+        "emergencyContact": {
+          "emergencyName": "Susan Doe",
+          "emergencyNumber": "291-293-1293"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1285322,
+        "name": {
+          "firstName": "Josie",
+          "lastName": "Pylo"
+        },
+        "age": 10,
+        "gender": "Female",
+        "address": {
+          "street": "452 Avenue",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "L1A 2N8"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Xavier Pylo",
+          "parentPhone": "777-777-7777"
+        },
+        "emergencyContact": {
+          "emergencyName": "Karen Doe",
+          "emergencyNumber": "242-221-1214"
+        },
+        "campProgram": "Campfire Adventure"
+      },
+      {
+        "childID": 1352123,
+        "name": {
+          "firstName": "Mary",
+          "lastName": "Pop"
+        },
+        "age": 10,
+        "gender": "Female",
+        "address": {
+          "street": "452 Crest",
+          "city": "Thunder Bay",
+          "province": "Ontario",
+          "zip": "K18 2N1"
+        },
+        "dietaryRestrictions": {
+          "allergy": "None",
+          "restrictions": "None"
+        },
+        "medicalInformation": {
+          "medication": "None",
+          "medicalCondition": "None"
+        },
+        "contact": {
+          "parentsName": "Joe Bee",
+          "parentPhone": "666-666-6666"
+        },
+        "emergencyContact": {
+          "emergencyName": "Nolan Kyle",
+          "emergencyNumber": "242-223-2311"
+        },
+        "campProgram": "Art Adventure"
+      }
+    ]
+  }

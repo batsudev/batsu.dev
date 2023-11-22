@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Page</title>
+    <link rel="stylesheet" href="assets/work.css">
+    <link href="https://fonts.cdnfonts.com/css/south-park-with-lowercase" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mentone" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/belanosima" rel="stylesheet">
+                
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/masonry.pkgd.min.js"></script>    
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-button">Back</a>
+    </header>
+
+    <div class="container">
+        <section class="masonry-grid">
+            <div class="box box1" style="background-color: #d2a24d"><a href="project1.html">XML Lab</a></div>
+            <div class="box box2"><a href="project2.html">JSON Lab</a></div>
+            <div class="box box3"><a href="project3.html">XML/JSON with Javascript</a></div>
+            <!-- Add more project boxes as needed -->
+        </section>
+    </div>
+    <img src="img/batsulogo2.png">
+<script>       document.addEventListener("DOMContentLoaded", function () {
+    // Add a click event listener to all links
+    const links = document.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            // Add fade-out class to body
+            document.body.classList.add("fade-out");
+
+            // Redirect to the link after the fade-out transition
+            const targetUrl = this.href;
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500); // Adjust the duration to match the CSS transition duration
+        });
+    });
+});</script>
+</body>
+</html>

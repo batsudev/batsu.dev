@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ece6c2;
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+body.fade-out {
+    opacity: 0;
+}
+
+header {
+    background-color: #ece6c2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    
+}
+.back-button {
+    text-decoration: none;
+    color: #cc6b49;
+    font-size: 50px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    transition: color 0.5s;
+    float: left;
+    font-family: 'Funkie Retro', sans-serif;
+  }
+
+  .back-button:hover {
+    background-color: transparent;
+    color: #6f5643;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    font-family: 'Funkie Retro', sans-serif;;
+    color: #d2a24c;
+    font-size: 3.4em;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.blog-post {
+    background-color: #ece6c2;
+    border: 2px solid #cc6b49;
+    border-radius: 30px;
+    padding: 50px;
+    width: 85%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    font-family: 'Courier New', monospace;
+    background-color: #F6F3e7#F6F3e7;
+    border:1px solid #cc6b49;
+    border-radius: 20px;
+    color: #6f5643;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    padding: 1px; /* Add padding to prevent scrollbar overlap */
+    padding-right: 0px; /* Adjust right padding to accommodate scrollbar */
+    padding-bottom: 0px; /* Adjust bottom padding to accommodate scrollbar */
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+     
+    }
+    
+  /* For WebKit browsers (Chrome, Safari) */
+  textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #d2a24c;
+    border-radius: 30px;
+    
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  pre {
+    background-color: #F6F3e7;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto; /* Enable horizontal scrolling for long lines of code */
+  }
+
+  code {
+    font-family: 'Courier New', monospace;
+    color: #333;
+  }
+
+  hr {
+    border-color: #6f5643;
+  }
+
+  h2 {
+    color: #6f5643;
+  }
+
+
